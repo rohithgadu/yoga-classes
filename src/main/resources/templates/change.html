@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Yoga Classes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" th:href="@{/}">Home</a>
+
+            <ul class="nav navbar-nav">
+                <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<br><br>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form th:action="@{/changeDate}" method="post" th:object="${user}">
+                <div class="form-group">
+                    <label class="control-label"> Please Select your time for yoga class </label>
+                    <br>
+                    <input type="radio" id="time1" name="time" value=1 th:field="*{yogaTime}">
+                    <label for="time1" >6AM-7AM</label>
+                    <input type="radio" id="time2" name="time" value=2 th:field="*{yogaTime}">
+                    <label for="time2">7AM-8AM</label>
+                    <input type="radio" id="time3" name="time" value=3 th:field="*{yogaTime}">
+                    <label for="time3">8AM-9AM</label>
+                    <input type="radio" id="time4" name="time" value=4 th:field="*{yogaTime}">
+                    <label for="time4">5PM-6PM</label>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

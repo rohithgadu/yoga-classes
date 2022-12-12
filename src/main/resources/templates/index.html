@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Yoga Classes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" th:href="@{/}">Home</a>
+
+            <ul class="nav navbar-nav">
+                <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<br><br>
+    <br><br>
+<div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="alert alert-info">
+                            <h3>Welcome</h3>
+                            <h4 th:text="${name}" ></h4>
+                            <h4>Your yoga class timings:</h4>
+                            <h4 th:text="${time}" ></h4>
+                        <div class="form-group">
+                            <span>Do you want to change your class time ?<a href="/" th:href="@{/change}">Click Here</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-white">What is Yoga? - Find the keys to the nature of the existence</h1>
+        <p class="text-white">
+            The ancient yogic discipline is far more than a fitness method for physical health or a psychological tool to achieve peace and happiness. Wellness of body and mind, often touted as the primary benefit of modern yoga practice, is merely a by-product of becoming a fully balanced and vibrantly alive being. The Sanskrit word "yoga" comes from the word "yuj" which means, "to unite." Hence, yoga is the union of the individual with the whole of existence, also commonly referred to as "self-realization," "nirvana," "mukti," or "enlightenment."
+            <br><br>
+            The ancient yogic discipline is far more than a fitness method for physical health or a psychological tool to achieve peace and happiness. Wellness of body and mind, often touted as the primary benefit of modern yoga practice, is merely a by-product of becoming a fully balanced and vibrantly alive being. The Sanskrit word "yoga" comes from the word "yuj" which means, "to unite." Hence, yoga is the union of the individual with the whole of existence, also commonly referred to as "self-realization," "nirvana," "mukti," or "enlightenment."
+            <br><br>
+            Yoga also refers to the inner technology that will lead one to this experience ? a technology formulated from rigorous inner observation, by ancient yogis over thousands of years. With their extraordinary perception and mastery over every aspect of the human mechanism, these great yogis delved into their own systems, uncovering the nature of the cosmos ? a macrocosm of the human system.
+            <br><br>
+            Initially, yoga was imparted by the Adiyogi (the first yogi), Shiva, over 15,000 years ago. It was Adiyogi who introduced to humanity the idea that one can evolve beyond one?s present level of existence. He poured his knowing into the legendary Sapta Rishis, or seven sages, who took the tremendous possibility offered by the yogic science to various parts of the world, including Asia, ancient Persia, northern Africa, and South America. It is this fundamental yet sophisticated science of elevating human consciousness that is the source of the world?s spiritual traditions, predating religion by many thousands of years.
+        </p>
+</div>
+
+</body>
+</html>
