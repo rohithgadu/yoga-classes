@@ -41,7 +41,15 @@ Run Docker Image
 
 ## Schema
 
-![image](https://user-images.githubusercontent.com/84178107/207111527-f8a2dc13-9a77-4024-8521-014a69079897.png)
+|    users     |  |  
+| -------- | ------- |
+|   `id`      | `BIGINT` |
+|   `age`      | `INT` |
+|   `date`      | `DATE` |
+|   `email`      | `VARCHAR(255)` |
+|   `name`      | `VARCHAR(255)` |
+|   `password`      | `VARCHAR(255)` |
+|   `yoga_time`      | `INT` |
 
 
 ## Website Images
