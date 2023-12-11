@@ -42,7 +42,7 @@ public class ChangeController {
     }
 
     @PostMapping
-    public String registerUserAccount(@ModelAttribute("user") int yogaTime, Authentication authentication, Model model) {
+    public String registerUserAccount(@ModelAttribute("users") int yogaTime, Authentication authentication, Model model) {
         String email= authentication.getName();
         User user=userRepository.findByEmail(email);
         user.setYogaTime(yogaTime);
