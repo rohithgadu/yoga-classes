@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/changeTheDate")
+@RequestMapping("/changeDate")
 public class ChangeController {
 
     @Autowired
@@ -31,7 +31,7 @@ public class ChangeController {
     UserService userService;
 
 
-    @ModelAttribute("users")
+    @ModelAttribute("user")
     public UserRegistrationDto userRegistrationDto() {
         return new UserRegistrationDto();
     }
