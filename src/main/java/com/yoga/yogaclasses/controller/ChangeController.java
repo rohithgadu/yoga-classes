@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/changeDate")
+@RequestMapping("/changeTheDate")
 public class ChangeController {
 
     @Autowired
