@@ -31,7 +31,7 @@ public class ChangeController {
     UserService userService;
 
 
-    @ModelAttribute("user")
+    @ModelAttribute("users")
     public UserRegistrationDto userRegistrationDto() {
         return new UserRegistrationDto();
     }
